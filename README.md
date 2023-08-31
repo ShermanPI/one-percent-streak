@@ -35,4 +35,5 @@ Once the application is started, enter your current streak in the text field. Th
 The application has some customization options. You can change the text color, background, and font size.
 
 ## Contributions
-All contributions are welcome! If you find any bugs or have any suggestions, please feel free to open an issue or submit a pull request.
+All contributions are welcome! :star:
+If you find any bugs or have any suggestions, please feel free to open an issue or submit a pull request.
