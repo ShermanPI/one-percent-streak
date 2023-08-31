@@ -1,4 +1,4 @@
-# 1% streak project
+# 1% streak project :zap:
 
 This project is a React application that allows you to calculate your 1% streak. The 1% streak is a concept developed by James Clear in his book "Atomic Habits." The idea is that, if you focus on improving a little bit each day, over time you can achieve significant results.
 
