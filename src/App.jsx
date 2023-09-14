@@ -76,6 +76,35 @@ function App() {
             <h4>Total: <span>{amount}</span></h4>
           </form>
         </HabitCardTracker>
+
+        <HabitCardTracker title='Counter'>
+        <form className='time-form' onChange={handleAmountChange} ref={countFormRef}>
+            <div className='form-input'>
+              <label htmlFor="amount">Initial Amount</label>
+              <input type="text" name='amount' />
+            </div>
+
+            <div className='form-input'>
+              <label htmlFor="streak">Streak days 🔥</label>
+              <input type="text" name='streak' />
+            </div>
+            <h4>Total: <span>{amount}</span></h4>
+          </form>
+        </HabitCardTracker>
+        <HabitCardTracker title='Counter'>
+        <form className='time-form' onChange={handleAmountChange} ref={countFormRef}>
+            <div className='form-input'>
+              <label htmlFor="amount">Initial Amount</label>
+              <input type="text" name='amount' />
+            </div>
+
+            <div className='form-input'>
+              <label htmlFor="streak">Streak days 🔥</label>
+              <input type="text" name='streak' />
+            </div>
+            <h4>Total: <span>{amount}</span></h4>
+          </form>
+        </HabitCardTracker>
       </div>
     </>
   )
