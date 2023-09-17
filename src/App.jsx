@@ -40,7 +40,6 @@ function App () {
     const streak = formData.streak.value ? formData.streak.value : 0
     const percentage = 1
 
-    console.log(initialAmount, streak)
     const total = (initialAmount * ((1 + percentage / 100) ** streak)).toFixed(2)
 
     setAmount(total)
@@ -51,31 +50,28 @@ function App () {
     const form = e.target
 
     const name = form.name.value
-    const grade = parseInt(form.grade.value)
-    const maxGrade = parseInt(form.maxGrade.value)
+    const grade = parseFloat(form.grade.value)
+    const maxGrade = parseFloat(form.maxGrade.value)
     const tenScale = grade / maxGrade * 10
-    const hundredScale = Math.round(grade / maxGrade * 100)
+    const hundredScale = tenScale * 10
     let level = ''
 
     if (tenScale >= 9.5) level = 'excelente'
     else if (tenScale >= 8.5) level = 'bueno'
     else if (tenScale >= 7.5) level = 'regular'
     else if (tenScale >= 7) level = 'suficiente'
-    else if (tenScale <= 6) level = 'debe mejorar'
+    else if (tenScale >= 6 || tenScale < 6) level = 'debe mejorar'
 
-    console.log(typeof grade, typeof maxGrade, grade > maxGrade)
     if (grade > maxGrade) {
       window.alert('La calificacion no puede ser mayor que la cantidad total de puntos')
       return
     }
 
-    console.log(name, grade, maxGrade)
     const newTable = [{ name, grade, maxGrade, hundredScale, level }, ...gradesTable]
+    console.log(newTable)
     setGradesTable(newTable)
     form.name.value = ''
     form.grade.value = ''
-
-    console.log(e)
   }
 
   const deleteTable = () => {
