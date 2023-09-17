@@ -50,10 +50,10 @@ function App () {
     const form = e.target
 
     const name = form.name.value
-    const grade = parseFloat(form.grade.value).toFixed(2)
-    const maxGrade = parseFloat(form.maxGrade.value).toFixed(2)
+    const grade = parseFloat(parseFloat(form.grade.value).toFixed(2))
+    const maxGrade = parseFloat(parseFloat(form.maxGrade.value).toFixed(2))
     const tenScale = grade / maxGrade * 10
-    const hundredScale = tenScale * 10
+    const hundredScale = parseFloat(parseFloat(tenScale * 10).toFixed(2))
     let level = ''
 
     if (tenScale >= 9.5) level = 'excelente'
@@ -62,6 +62,7 @@ function App () {
     else if (tenScale >= 7) level = 'suficiente'
     else if (tenScale >= 6 || tenScale < 6) level = 'debe mejorar'
 
+    console.log(grade, maxGrade, typeof grade, typeof maxGrade)
     if (grade > maxGrade) {
       window.alert('La calificacion no puede ser mayor que la cantidad total de puntos')
       return
