@@ -50,8 +50,8 @@ function App () {
     const form = e.target
 
     const name = form.name.value
-    const grade = parseFloat(form.grade.value)
-    const maxGrade = parseFloat(form.maxGrade.value)
+    const grade = parseFloat(form.grade.value).toFixed(2)
+    const maxGrade = parseFloat(form.maxGrade.value).toFixed(2)
     const tenScale = grade / maxGrade * 10
     const hundredScale = tenScale * 10
     let level = ''
