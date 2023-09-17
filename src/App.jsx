@@ -116,7 +116,7 @@ function App () {
             {gradesTable.map((el, i) => {
               return (
                 <tr key={i}>
-                  <td>{i}</td>
+                  <td>{i + 1}</td>
                   <td>{el.name}</td>
                   <td>{`${el.grade}/${el.maxGrade}`}</td>
                   <td>{`${el.hundredScale}/100`}</td>
