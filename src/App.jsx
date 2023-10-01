@@ -85,20 +85,20 @@ function App () {
     <>
       <h1>My Dashboard ⭐</h1>
       <div className='streaks-container'>
-        <HabitCardTracker title='Rubric mommy'>
+        <HabitCardTracker title='Rubrica'>
           <form className='time-form' onSubmit={handleRubricSubmit}>
             <div className='form-input'>
-              <label htmlFor='name'>Student's Name</label>
+              <label htmlFor='name'>Nombre del estudiante</label>
               <input type='text' id='name' name='name' required />
             </div>
 
             <div className='form-input'>
-              <label htmlFor='grade'>Grade</label>
+              <label htmlFor='grade'>Calificación</label>
               <input type='text' id='grade' name='grade' required />
             </div>
 
             <div className='form-input'>
-              <label htmlFor='maxGrade'>Max Grade</label>
+              <label htmlFor='maxGrade'>Califiación Máxima</label>
               <input type='text' id='maxGrade' name='maxGrade' required />
             </div>
             <input type='submit' value='Submit' />
@@ -106,11 +106,11 @@ function App () {
 
         </HabitCardTracker>
 
-        <h2>TABLE</h2>
-        <button onClick={deleteTable}> Limpiar tabla</button>
+        <h2>Tabla De Calificaciones</h2>
+        <button onClick={deleteTable}>Limpiar tabla</button>
         <table>
           <thead>
-            <tr><th>Numero</th><th>Name</th><th>Grade</th><th>hundred Scale</th><th>Level</th></tr>
+            <tr><th>Numero</th><th>Nombre</th><th>Califiación</th><th>Escala de Cien</th><th>Nivel</th></tr>
           </thead>
           <tbody>
             {gradesTable.map((el, i) => {
